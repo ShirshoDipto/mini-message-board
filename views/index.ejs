@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <div class="messages">
+      <% for (let elem of message) { %>
+        <div class="message">
+          <div class="name"><p><%= elem.user %></p></div>
+          <div class="text"><p><%= elem.text %></p></div>
+          <div class="date"><p><%= elem.added %></p></div>
+        </div>
+      <% } %>
+    </div>
+
+    <div class="new-message">
+      <a href="/new"><button>New Message</button></a>
+    </div>
+  </body>
+</html>
+
